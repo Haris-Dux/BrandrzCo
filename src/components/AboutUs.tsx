@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -31,12 +32,12 @@ const AboutUs = () => {
                   thrive in the competitive marketplace.
                 </p> 
 
-                <button
-                  type="button"
+                <Link
+                  href="tel:+92 332 2222929"
                   className="bg_main_button uppercase text-white px-7 py-2.5"
                 >
                   Get Started
-                </button>
+                </Link>
               </div>
             </div>
             <div className="right_side flex justify-center items-center min-w-[50%]">

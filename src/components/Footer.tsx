@@ -60,14 +60,14 @@ const Footer = () => {
           </div>
           <div className="mt-4 links flex items-center justify-start gap-2.5">
             <a
-              href="https://www.facebook.com/googlysmart.shop/"
+              href="https://www.facebook.com/profile.php?id=61560768478851&mibextid=LQQJ4d"
               target="_blank"
               className=""
             >
               <FaFacebookF className="text-white bg-[#3c3b3b] h-7 w-7 p-1.5 rounded-full" />
             </a>
             <a
-              href="https://www.instagram.com/googlysmart.shop/"
+              href="https://www.instagram.com/thebrandrsco?igsh=Y29tMDloc3d5bWxo&utm_source=qr"
               target="_blank"
               className=""
             >

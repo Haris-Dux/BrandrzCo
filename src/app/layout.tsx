@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BrandrsCo",
@@ -18,6 +16,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          href="https://cdn.shopify.com/s/files/1/0649/1399/8024/files/download.png?v=1718314438"
+          sizes="any"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet"/>
+      </head>
+     
       <body className="light">
         <div className="relative w-full flex justify-center items-center">
           <Navbar />

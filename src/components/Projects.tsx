@@ -8,31 +8,31 @@ const data = [
   {
     id: 1,
     image:
-      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Vector_3.png?v=1717529003",
+      "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Googly.webp?v=1718312022",
     alt: "image",
   },
   {
     id: 2,
     image:
-      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Vector_3.png?v=1717529003",
+      "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/FYB.webp?v=1718312022",
     alt: "image",
   },
   {
     id: 3,
     image:
-      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Vector_3.png?v=1717529003",
+      "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Cosmo.webp?v=1718312022",
     alt: "image",
   },
   {
     id: 4,
     image:
-      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Vector_3.png?v=1717529003",
+      "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Smokin.webp?v=1718312022",
     alt: "image",
   },
   {
     id: 5,
     image:
-      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Vector_3.png?v=1717529003",
+      "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Octa.webp?v=1718312022",
     alt: "image",
   },
 ];
