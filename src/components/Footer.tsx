@@ -64,14 +64,14 @@ const Footer = () => {
               target="_blank"
               className=""
             >
-              <FaFacebookF className="text-white bg-[#3c3b3b] h-7 w-7 p-1.5 rounded-full" />
+              <FaFacebookF className="text-white bg-[#381300] h-7 w-7 p-1.5 rounded-full" />
             </a>
             <a
               href="https://www.instagram.com/thebrandrsco?igsh=Y29tMDloc3d5bWxo&utm_source=qr"
               target="_blank"
               className=""
             >
-              <FaInstagram className="text-white bg-[#3c3b3b] h-7 w-7 p-1.5 rounded-full" />
+              <FaInstagram className="text-white bg-[#381300] h-7 w-7 p-1.5 rounded-full" />
             </a>
           </div>
         </div>

@@ -11,20 +11,20 @@ const HeroSection = () => {
             {/* LEFT SIDE */}
             <div className="left_side flex justify-center sm:justify-between items-center">
               <div className="content px-0 sm:px-20 lg:px-0 mt-36 lg:mt-0">
-                <h2 className="mb-6 text-4xl font-bold max-w-lg pr-5">
-                  YOUR BUDDY IS CREATING & GROWING BRANDS
+                <h2 className="main_header mb-6 text-5xl bg-[381300] font-bold pr-5">
+                  YOUR BUDDY IS CREATING <br /> & GROWING BRANDS
                 </h2>
-                <p className="mb-6 max-w-md sm:max-w-xl xl:max-w-md">
+                <p className="mb-6 tracking-wide max-w-md sm:max-w-xl xl:max-w-md">
                   Welcome to The Brandrs Co., where we empower young
                   entrepreneurs and aspiring brand owners to bring their visions
-                  to life. Whether you&apos;re looking to launch a private label, a
-                  unique product, or an e-commerce store, The Brandrs Co. is
-                  your one-stop shop for all your branding needs.
+                  to life. Whether you&apos;re looking to launch a private
+                  label, a unique product, or an e-commerce store, The Brandrs
+                  Co. is your one-stop shop for all your branding needs.
                 </p>
 
                 <Link
                   href="tel:+92 332 2222929"
-                  className="bg_main_button uppercase text-white px-7 py-2.5"
+                  className="bg_main_button bangers text-lg tracking-widest uppercase text-white px-8 py-3"
                 >
                   Get Started
                 </Link>

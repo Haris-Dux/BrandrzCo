@@ -7,30 +7,35 @@ import "slick-carousel/slick/slick.css";
 const data = [
   {
     id: 1,
+    link: "https://googly-smart.com",
     image:
       "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Googly.webp?v=1718312022",
     alt: "image",
   },
   {
     id: 2,
+    link: "https://foryourbeauty.shop",
     image:
       "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/FYB.webp?v=1718312022",
     alt: "image",
   },
   {
     id: 3,
+    link: "https://glowwithcosmo.com",
     image:
       "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Cosmo.webp?v=1718312022",
     alt: "image",
   },
   {
     id: 4,
+    link: "https://smokenjoyhoustons.com",
     image:
       "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Smokin.webp?v=1718312022",
     alt: "image",
   },
   {
     id: 5,
+    link: "https://www.octatechsolution.com",
     image:
       "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Octa.webp?v=1718312022",
     alt: "image",
@@ -82,7 +87,7 @@ const Projects = () => {
           <div className="mt-12 max-w-5xl xl:max-w-6xl xxl:max-w-7xl mx-auto min-h-screen flex flex-col items-center gap-9 ">
             <div className="w-full  flex flex-col gap-6 ">
               <div className="header">
-                <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-xl font-semibold p-4">
+                <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-2xl font-medium p-4">
                   OUR PROJECTS
                 </h3>
               </div>
@@ -90,13 +95,18 @@ const Projects = () => {
               <div className="mt-5">
                 <Slider ref={sliderRef} {...settings}>
                   {data.map((data) => (
-                    <div key={data?.id} className="relative aspect-[400/300]">
-                      <Image
-                        fill
-                        className="cursor-pointer"
-                        src={data?.image}
-                        alt={data?.alt}
-                      />
+                    <div
+                      key={data?.id}
+                      className="relative aspect-[400/300] focus:outline-none"
+                    >
+                      <a href={data.link} target="_blank">
+                        <Image
+                          fill
+                          className="cursor-pointer"
+                          src={data?.image}
+                          alt={data?.alt}
+                        />
+                      </a>
                     </div>
                   ))}
                 </Slider>
@@ -108,7 +118,7 @@ const Projects = () => {
                 <div className="w-full  flex flex-col">
                   {/* heading */}
                   <div className="w-full flex flex-col gap-4">
-                    <h1 className="text-white font-semibold text-3xl">
+                    <h1 className="text-white spacing font-medium text-3xl">
                       WHY CHOOSE US?
                     </h1>
                     <p className="text-white">
@@ -129,7 +139,7 @@ const Projects = () => {
                         />
                       </div>
                       <div className="flex flex-col gap-2">
-                        <h1 className="text-white font-semibold text-xl">
+                        <h1 className="text-white spacing font-medium text-xl">
                           COMPETENT DEVELOPERS
                         </h1>
                         <p className="text-gray-200">
@@ -148,7 +158,7 @@ const Projects = () => {
                         />
                       </div>
                       <div className="flex flex-col gap-2">
-                        <h1 className="text-white font-semibold text-xl">
+                        <h1 className="text-white spacing font-medium text-xl">
                           STATE OF THE ART TECHNOLOGY
                         </h1>
                         <p className="text-gray-200">
@@ -167,7 +177,7 @@ const Projects = () => {
                         />
                       </div>
                       <div className="flex flex-col gap-2">
-                        <h1 className="text-white font-semibold text-xl">
+                        <h1 className="text-white spacing font-medium text-xl">
                           EXCELLENT CUSTOMER SERVICE
                         </h1>
                         <p className="text-gray-200">

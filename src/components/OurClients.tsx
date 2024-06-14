@@ -123,7 +123,7 @@ const OurClients = () => {
         <div className="max-w-5xl xl:max-w-6xl xxl:max-w-7xl mx-auto">
           {/* Header */}
           <div className="header w-full max-w-4xl mx-auto text-center px-4">
-            <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-xl  font-semibold py-4">
+            <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-2xl font-medium p-4">
               OUR CLIENTS
             </h3>
 

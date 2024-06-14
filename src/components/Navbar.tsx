@@ -147,7 +147,7 @@ const Navbar = () => {
           <div className="hidden md:inline-block">
             <Link
               href="tel:+92 332 2222929"
-              className="bg_navbar_button uppercase text-black font-semibold px-7 py-2.5"
+              className="bg_navbar_button bangers text-lg tracking-widest uppercase text-[#381300] px-8 py-3"
             >
               Contact Us
             </Link>
