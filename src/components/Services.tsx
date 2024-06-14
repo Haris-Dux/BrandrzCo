@@ -70,7 +70,7 @@ const Services = () => {
       <section className="-mt-20 lg:-mt-10">
         <div className=" bg_service py-16 sm:py-20 px-4 xl:px-0 bg-[#35170C]">
           <div className="header max-w-md mx-auto">
-            <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-xl font-semibold p-4">
+            <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-2xl font-medium p-4">
               SERVICES WE OFFER
             </h3>
           </div>
@@ -81,22 +81,20 @@ const Services = () => {
                   key={service.id}
                   className="bg_service_box flex justify-center items-center h-[22rem] w-[17rem] mt-2"
                 >
-                  <div className=" content text-center ">
-                    <div className="relative aspect-[200/100]">
+                  <div className="content text-center ">
+                    <div className="relative mx-auto h-[11rem] w-[14rem]">
                       <Image
                         fill
                         src="https://cdn.shopify.com/s/files/1/0852/5099/8550/files/Vector_4.png?v=1718129867"
                         alt="service image"
-                        className="object-contain mx-auto w-full px-7"
+                        className="object-contain mx-auto w-full px-2"
                       />
                     </div>
-                    <h2 className="mt-4 px-4 text-md font-bold">
+                    <h2 className="mt-0 px-3 spacing text-xl font-medium">
                       {service.title}
                     </h2>
                     <p className="mt-1 px-6">
-                      {isExpanded
-                        ? service?.desc
-                        : `${service?.desc.slice(0, 40)}... `}
+                      <span className="line-clamp-2">{service?.desc}</span>
                       <span
                         className="block text-sm font-semibold text-[#35160C] underline underline-offset-2 cursor-pointer"
                         onClick={() => openModal(service.id)}
@@ -122,7 +120,7 @@ const Services = () => {
             />
           </Modal.Icon>
           <Modal.Content className="my-4 text-center">
-            <h3 className="mb-2 text-body-1 text-lg sm:text-2xl font-bold text-black">
+            <h3 className="mb-2 text-body-1 spacing text-xl sm:text-2xl font-medium text-black">
               {service?.title}
             </h3>
             <p className="mx-auto max-w-lg text-body-4 text-[16px] sm:text-lg font-normal text-gray-800">

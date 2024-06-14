@@ -99,7 +99,7 @@ const Team = () => {
       <section className="py-16 sm:py-20 px-4 xl:px-0 bg-[#F2E5CD]">
         <div className="max-w-5xl xl:max-w-6xl xxl:max-w-7xl mx-auto">
           <div className="header w-full max-w-4xl mx-auto text-center">
-            <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-xl font-semibold py-4">
+            <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-2xl font-medium p-4">
               OUR CREATIVE TEAM
             </h3>
 
@@ -127,7 +127,7 @@ const Team = () => {
                     </div>
 
                     <div className="detail group-hover:block mt-3 text-center">
-                      <h3 className="text-xl font-semibold">{data.name}</h3>
+                      <h3 className="text-xl spacing font-medium">{data.name}</h3>
                       <p>{data.post}</p>
                     </div>
                   </div>

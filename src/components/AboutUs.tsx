@@ -9,7 +9,7 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 min-h-[90vh]">
             <div className="left_side flex justify-center items-center min-w-[50%]">
               <div className="content">
-                <h2 className="mb-6 text-4xl text-[#BE2A1E] font-bold max-w-lg pr-5">
+                <h2 className="mb-6 text-4xl text-[#BE2A1E] spacing font-semibold max-w-lg pr-5">
                   ABOUT US
                 </h2>
                 <p className="mb-6 max-w-md">
@@ -26,15 +26,15 @@ const AboutUs = () => {
                 <p className="mb-6 max-w-md">
                   Our mission is to simplify the process of building a
                   successful brand by offering expert guidance and tailored
-                  solutions. Whether you&apos;re just starting out or looking to take
-                  your existing business to the next level, The Brandrs Co. is
-                  here to provide the tools, knowledge, and support you need to
-                  thrive in the competitive marketplace.
-                </p> 
+                  solutions. Whether you&apos;re just starting out or looking to
+                  take your existing business to the next level, The Brandrs Co.
+                  is here to provide the tools, knowledge, and support you need
+                  to thrive in the competitive marketplace.
+                </p>
 
                 <Link
                   href="tel:+92 332 2222929"
-                  className="bg_main_button uppercase text-white px-7 py-2.5"
+                  className="bg_main_button bangers text-lg tracking-widest uppercase text-white px-8 py-3"
                 >
                   Get Started
                 </Link>
