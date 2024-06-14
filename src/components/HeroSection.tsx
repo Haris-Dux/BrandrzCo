@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "./Components.css";
 import Link from "next/link";
+import { Typewriter } from "nextjs-simple-typewriter";
 
 const HeroSection = () => {
   return (
@@ -11,8 +12,14 @@ const HeroSection = () => {
             {/* LEFT SIDE */}
             <div className="left_side flex justify-center sm:justify-between items-center">
               <div className="content px-0 sm:px-20 lg:px-0 mt-36 lg:mt-0">
-                <h2 className="main_header mb-6 text-5xl bg-[381300] font-bold pr-5">
-                  YOUR BUDDY IS CREATING <br /> & GROWING BRANDS
+                <h2 className="main_header min-h-52 sm:min-h-24 mb-6 text-5xl text-[#381300] font-bold pr-5">
+                  <Typewriter
+                    words={["YOUR BUDDY IS CREATING & GROWING BRANDS"]}
+                    loop={0}
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
                 </h2>
                 <p className="mb-6 tracking-wide max-w-md sm:max-w-xl xl:max-w-md">
                   Welcome to The Brandrs Co., where we empower young
