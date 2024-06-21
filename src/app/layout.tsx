@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
 export const metadata: Metadata = {
   title: "BrandrsCo",
@@ -24,6 +24,7 @@ export default function RootLayout({
         />
         <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet"/>
+        <script src="https://embed.tawk.to/6675d6219d7f358570d21dc4/1i0u4otj0" async />
       </head>
      
       <body className="light">

@@ -6,8 +6,14 @@
 }
 
 /* HERO SECTION  */
+.large_screen_banner {
+  background-image: url("https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Group_1175_1.png?v=1718977321");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
-.main_banner {
+.plain_banner {
   background-image: url("https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Banner_Bg.png?v=1717511196");
   background-repeat: no-repeat;
   background-size: cover;
@@ -122,5 +128,11 @@
 @media only screen and (max-width: 425px) {
   .bg_client_box_child {
     padding-inline: 1.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .main_header {
+    height: 12rem;
   }
 }

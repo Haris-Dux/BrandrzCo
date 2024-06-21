@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import "./Layouts.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
   const [responsiveMenu, setResponsiveMenu] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -21,24 +23,35 @@ const Navbar = () => {
   }, []);
 
   const navigation = [
-    { title: "Home", path: "#home" },
-    { title: "Service", path: "#service" },
-    { title: "About", path: "#about" },
-    { title: "Projects", path: "#projects" },
-    { title: "Team", path: "#team" },
+    { title: "Home", path: "/" },
+    { title: "Service", path: "/#service" },
+    { title: "About", path: "/#about" },
+    { title: "Projects", path: "/#projects" },
+    { title: "Team", path: "/#team" },
   ];
 
   const handleMoveToTop = () => {
     window.scroll(0, 0);
   };
 
-  const handleLinkClick = () => {
+  const handleMenuClick = () => {
     setResponsiveMenu(false);
-    handleMoveToTop();
+    // handleMoveToTop();
   };
 
-  const handleClick = () => {
-    console.log("akjsckajcs");
+  const handleLinkClick = (e: any, path: string) => {
+    e.preventDefault();
+
+    const [url, hash] = path.split("#");
+
+    if (url === router.pathname) {
+      const element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      router.push(path);
+    }
   };
 
   return (
@@ -50,7 +63,7 @@ const Navbar = () => {
       >
         <div className="sm:flex sm:items-center justify-center sm:justify-between w-full px-0 max-w-full mx-auto md:px-1 lg:px-16">
           <div className="flex items-center justify-between md:block">
-            <Link href="#home">
+            <Link href="/">
               <Image
                 width={60}
                 height={60}
@@ -102,7 +115,7 @@ const Navbar = () => {
           >
             {responsiveMenu && (
               <button
-                onClick={handleLinkClick}
+                onClick={handleMenuClick}
                 className="text-white pr-5 pt-10 flex justify-end w-full items-center"
               >
                 <p className="pt-4">
@@ -129,7 +142,7 @@ const Navbar = () => {
               {navigation.map((data, index) => (
                 <li
                   key={index}
-                  onClick={handleLinkClick}
+                  onClick={(e) => handleLinkClick(e, data.path)}
                   className="text-white hover:text-gray-200 cursor-pointer"
                 >
                   <a

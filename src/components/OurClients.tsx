@@ -9,9 +9,9 @@ import { FaStar } from "react-icons/fa";
 const data = [
   {
     id: 1,
-    name: "Ahmed Khan",
+    name: "Shoaib Khan",
     rating: 5,
-    post: "Founder, Tech Innovators",
+    post: "Founder, Googly-smart",
     review:
       "BrandrsCo exceeded my expectations. Their team is incredibly talented and dedicated, transforming our idea into a successful brand. Their attention to detail and creativity are unmatched.",
     image:
@@ -19,9 +19,9 @@ const data = [
   },
   {
     id: 2,
-    name: "Sara Ali",
+    name: "Sidra Emran",
     rating: 4,
-    post: "CEO, Fashion Forward",
+    post: "CEO, Cosmo Labs",
     review:
       "Working with BrandrsCo was a game-changer for us. They took care of everything from product hunting to our first sale. Their expertise made our journey smooth and successful.",
     image:
@@ -29,19 +29,19 @@ const data = [
   },
   {
     id: 3,
-    name: "Zainab Malik",
+    name: "Faisal Malik",
     rating: 5,
-    post: "Owner, Beauty Bliss",
+    post: "Owner, Smokenjoy Houston",
     review:
       "The team at BrandrsCo is phenomenal. Their strategic approach and creative solutions helped us launch our brand seamlessly. We couldn't have done it without them!",
     image:
-      "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/woman.png?v=1718313511",
+      "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/profile.png?v=1718313511",
   },
   {
     id: 4,
-    name: "Bilal Ahmed",
+    name: "Ammar Emran",
     rating: 4,
-    post: "Co-Founder, Gadget Hub",
+    post: "Founder, Octa Tech Solutions LLC",
     review:
       "BrandrsCo provided exceptional service. From the initial concept to the final launch, their expertise and support were invaluable. Highly recommended!",
     image:
@@ -51,7 +51,7 @@ const data = [
     id: 5,
     name: "Ayesha Khan",
     rating: 5,
-    post: "Managing Director, Home Essentials",
+    post: "CEO, For Your Beauty",
     review:
       "I am incredibly impressed with BrandrsCo. Their team is knowledgeable, professional, and truly dedicated to their clients' success. Our brand launch was a huge success, thanks to them.",
     image:
