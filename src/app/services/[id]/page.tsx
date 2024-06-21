@@ -1,9 +1,7 @@
 "use client";
-import "./Components.css";
-import { useState } from "react";
-import { Check } from "phosphor-react";
-import { Button, Modal } from "keep-react";
-import Image from "next/image";
+import { useParams } from "next/navigation";
+import "../../../components/Components.css";
+import { IoArrowBackOutline } from "react-icons/io5";
 import Link from "next/link";
 
 const data = [
@@ -65,101 +63,38 @@ const data = [
   },
 ];
 
-const Services = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [serviceId, setServiceId] = useState<number>();
+const page = () => {
+  const { id } = useParams();
 
-  const [isExpanded, setIsExpanded] = useState(false);
+  const serviceId = Number(id);
 
-  const toggleReadMore = () => {
-    setIsExpanded(!isExpanded);
-  };
-
-  const openModal = (id: number) => {
-    setServiceId(id);
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
-  const service = data.find((service) => service.id === serviceId);
-  // console.log("service", service);
+  const serviceData = data.find((data) => data.id === serviceId);
+  console.log(serviceData);
 
   return (
     <>
-      <section className="-mt-20 lg:-mt-10">
-        <div className=" bg_service py-16 sm:py-20 px-4 xl:px-0 bg-[#35170C]">
-          <div className="header max-w-md mx-auto">
-            <h3 className="bg_section_title m-auto text-center uppercase text-white text-lg sm:text-2xl font-medium p-4">
-              SERVICES WE OFFER
-            </h3>
-          </div>
-          <div className="mt-8 sm:mt-12 max-w-5xl xl:max-w-6xl xxl:max-w-7xl mx-auto min-h-screen flex items-center">
-            <div className="flex justify-center items-center flex-wrap gap-5 w-full">
-              {data.map((service) => (
-                <Link
-                  href={`/services/${service.id}`}
-                  key={service.id}
-                  className="bg_service_box flex justify-center items-center h-[22rem] w-[17rem] mt-2"
-                >
-                  <div className="content text-center ">
-                    <div className="relative mx-auto h-[11rem] w-[14rem]">
-                      <Image
-                        fill
-                        src={service.image}
-                        alt="service image"
-                        className="object-contain mx-auto w-full px-2"
-                      />
-                    </div>
-                    <h2 className="mt-0 px-3 spacing text-xl font-medium">
-                      {service.title}
-                    </h2>
-                    <p className="mt-1 px-6">
-                      <span className="line-clamp-2">{service?.desc}</span>
-                      <Link
-                        href={`/services/${service.id}`}
-                        className="block text-sm font-semibold text-[#35160C] underline underline-offset-2 cursor-pointer"
-                      >
-                        Read More
-                      </Link>
-                      {/* <span
-                        className="block text-sm font-semibold text-[#35160C] underline underline-offset-2 cursor-pointer"
-                        onClick={() => openModal(service.id)}
-                      >
-                        Read More
-                      </span> */}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+      <section className="w-full">
+        <div className="bg_service px-4 xl:px-0 bg-[#35170C]">
+          <div className="pt-36 max-w-5xl xl:max-w-6xl xxl:max-w-7xl mx-auto min-h-screen">
+            <div className="header w-full flex justify-between items-center">
+              <h2 className="text-white text-3xl sm:text-3xl tracking-wider">
+                {serviceData?.title}
+              </h2>
+              <Link href="/">
+                <h2 className="flex justify-between items-center cursor-pointer">
+                  <IoArrowBackOutline size={25} className="text-white mr-2" />{" "}
+                  <span className="text-white text-xl sm:text-2xl tracking-wider">
+                    Back
+                  </span>
+                </h2>
+              </Link>
             </div>
+            <p className="mt-10 text-white text-lg">{serviceData?.desc}</p>
           </div>
         </div>
       </section>
-
-      <Modal isOpen={isOpen} onClose={closeModal}>
-        <Modal.Body className="bg-[#EEE3C4] flex w-[40rem] flex-col items-center p-6 lg:p-8">
-          <Modal.Icon className="relative h-24 w-24 bg-transparent">
-            <Image
-              fill
-              src="https://cdn.shopify.com/s/files/1/0852/5099/8550/files/Group.png?v=1718119221"
-              alt="hat"
-            />
-          </Modal.Icon>
-          <Modal.Content className="my-4 text-center">
-            <h3 className="mb-2 text-body-1 spacing text-xl sm:text-2xl font-medium text-black">
-              {service?.title}
-            </h3>
-            <p className="mx-auto max-w-lg text-body-4 text-[16px] sm:text-lg font-normal text-gray-800">
-              {service?.desc}
-            </p>
-          </Modal.Content>
-        </Modal.Body>
-      </Modal>
     </>
   );
 };
 
-export default Services;
+export default page;

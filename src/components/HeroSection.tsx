@@ -1,18 +1,35 @@
+"use client";
 import Image from "next/image";
 import "./Components.css";
 import Link from "next/link";
 import { Typewriter } from "nextjs-simple-typewriter";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
-      <section className="main_banner overflow-visible px-4 md:px-20 xl:px-0 bg-[#35170C]">
+      <section
+        className={`${
+          isLargeScreen ? "large_screen_banner" : "plain_banner"
+        }  overflow-visible px-4 md:px-20 xl:px-0 bg-[#35170C]`}
+      >
         <div className="max-w-5xl xl:max-w-6xl xxl:max-w-7xl mx-auto ">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 min-h-screen lg:min-h-screen xl:min-h-screen xxl:min-h-screen">
             {/* LEFT SIDE */}
             <div className="left_side flex justify-center sm:justify-between items-center">
               <div className="content px-0 sm:px-20 lg:px-0 mt-36 lg:mt-0">
-                <h2 className="main_header min-h-52 sm:min-h-24 mb-6 text-5xl text-[#381300] font-bold pr-5">
+                <h2 className="main_header min-h-[9rem] md:min-h-[9rem] xl:min-h-[6rem] mb-6 text-5xl text-[#381300] font-bold pr-5">
                   <Typewriter
                     words={["YOUR BUDDY IS CREATING & GROWING BRANDS"]}
                     loop={0}
@@ -39,7 +56,7 @@ const HeroSection = () => {
             </div>
 
             {/* RIGHT SIDE */}
-            <div className="mt-8 pb-24 lg:pb-20 xl:pb-0 lg:mt-0 right_side flex justify-center items-end">
+            <div className="lg:hidden w-full mt-8 pb-28 lg:pb-20 xl:pb-0 lg:mt-0 right_side flex justify-center items-end">
               <Image
                 width={550}
                 height={550}

@@ -40,6 +40,20 @@ const data = [
       "https://cdn.shopify.com/s/files/1/0649/1399/8024/files/Octa.webp?v=1718312022",
     alt: "image",
   },
+  {
+    id: 5,
+    link: "https://ammarforte.com",
+    image:
+      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Ammar.webp?v=1718992068",
+    alt: "image",
+  },
+  {
+    id: 5,
+    link: "https://entrepreneur.octatech-solutions.com",
+    image:
+      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/Little.webp?v=1718992068",
+    alt: "image",
+  },
 ];
 
 const Projects = () => {
