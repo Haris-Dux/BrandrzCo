@@ -1,5 +1,3 @@
-"use client";
-import { useParams } from "next/navigation";
 import "../../../components/Components.css";
 import { IoArrowBackOutline } from "react-icons/io5";
 import Link from "next/link";
@@ -63,13 +61,11 @@ const data = [
   },
 ];
 
-const page = () => {
-  const { id } = useParams();
+const page = ({params}:any) => {
 
-  const serviceId = Number(id);
+  const serviceId = Number(params.id);
 
   const serviceData = data.find((data) => data.id === serviceId);
-  console.log(serviceData);
 
   return (
     <>

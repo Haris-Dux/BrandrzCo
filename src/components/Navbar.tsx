@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import "./Layouts.css";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter,usePathname } from "next/navigation";
 
 const Navbar = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const [responsiveMenu, setResponsiveMenu] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -15,11 +16,12 @@ const Navbar = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize();
+    if (typeof window !== "undefined") {
+      handleResize();
+      window.addEventListener("resize", handleResize);
 
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   const navigation = [
@@ -30,13 +32,9 @@ const Navbar = () => {
     { title: "Team", path: "/#team" },
   ];
 
-  const handleMoveToTop = () => {
-    window.scroll(0, 0);
-  };
 
   const handleMenuClick = () => {
     setResponsiveMenu(false);
-    // handleMoveToTop();
   };
 
   const handleLinkClick = (e: any, path: string) => {
@@ -44,10 +42,12 @@ const Navbar = () => {
 
     const [url, hash] = path.split("#");
 
-    if (url === router.pathname) {
-      const element = document.getElementById(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+    if (url === pathname) {
+      if (typeof window !== "undefined") {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
     } else {
       router.push(path);
