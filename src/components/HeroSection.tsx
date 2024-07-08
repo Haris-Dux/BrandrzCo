@@ -33,7 +33,7 @@ const HeroSection = () => {
               <div className="content px-0 sm:px-20 lg:px-0 mt-36 lg:mt-0">
                 <h2 className="main_header min-h-[9rem] md:min-h-[9rem] xl:min-h-[6rem] mb-6 text-5xl text-[#381300] font-bold pr-5">
                   <Typewriter
-                    words={["YOUR BUDDY IS CREATING & GROWING BRANDS"]}
+                    words={["Transforming Ideas Into Thriving Brands"]}
                     loop={0}
                     typeSpeed={70}
                     deleteSpeed={50}
