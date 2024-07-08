@@ -60,11 +60,10 @@ const data = [
     id: 8,
     title: "Product Photoshoot",
     image:
-      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/WhatsApp_Image_2024-06-22_at_1.44.33_AM_e1ed8a1e-b23a-406d-b21f-d1eccd393974.jpg?v=1719009235",
+      "https://cdn.shopify.com/s/files/1/0704/6378/2946/files/WhatsApp_Image_2024-06-24_at_6.12.22_PM.jpg?v=1719234811",
     desc: "Our Product Photoshoot service captures the essence of your products with stunning, high-quality images that elevate your brand's visual appeal. Our experienced photographers specialize in highlighting the unique features and details of each product, creating images that attract and engage potential customers.",
-  },
+  },
 ];
-
 
 const Services = () => {
   const [isOpen, setIsOpen] = useState(false);
