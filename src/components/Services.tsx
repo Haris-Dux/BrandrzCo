@@ -124,12 +124,6 @@ const Services = () => {
                       >
                         Read More
                       </Link>
-                      {/* <span
-                        className="block text-sm font-semibold text-[#35160C] underline underline-offset-2 cursor-pointer"
-                        onClick={() => openModal(service.id)}
-                      >
-                        Read More
-                      </span> */}
                     </p>
                   </div>
                 </Link>
