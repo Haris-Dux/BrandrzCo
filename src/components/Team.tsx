@@ -34,14 +34,7 @@ const data = [
 
     image:
       "https://cdn.shopify.com/s/files/1/0852/5099/8550/files/WhatsApp_Image_2024-06-12_at_12.58.02_AM.jpg?v=1718139633",
-  },
-  {
-    id: 5,
-    name: "Hassan Rizvi",
-    post: "CFO",
-    image:
-      "https://cdn.shopify.com/s/files/1/0852/5099/8550/files/WhatsApp_Image_2024-06-12_at_12.56.01_AM.jpg?v=1718139632",
-  },
+  }
 ];
 
 const Team = () => {
